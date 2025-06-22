@@ -1,5 +1,8 @@
 import "./globals.css";
 import {Quicksand} from "next/font/google"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 export const quicksand = Quicksand({
   subsets: ["latin"],

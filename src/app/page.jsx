@@ -9,6 +9,12 @@ import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import Badge from "@mui/material/Badge";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SortRoundedIcon from '@mui/icons-material/SortRounded';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepartmentOutlined';
+import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
+import Slider from "react-slick";
+import { Box, Typography, useTheme } from "@mui/material";
 
 
 export default function Home() {
@@ -35,6 +41,18 @@ export default function Home() {
       setSearchString("");
     }
   }
+
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+   arrows: true,       // ✅ Enable arrows
+    autoplay: true,     // ✅ Enable autoplay
+    autoplaySpeed: 3000 // Time between slides (ms)
+  };
 
   return (
     <>
@@ -85,7 +103,7 @@ export default function Home() {
 
       {/* Nav Starting  */}
 
-      <div className="lg:px-2 pl-1 lg:pl-2 pr-3 lg:pr-2 flex justify-between items-center border-b-0 pb-1 border-[#ECECEC] shadow-md lg:shadow-none">
+      <div className="lg:px-2 pl-1 lg:pl-2 pr-3 lg:pr-2 flex justify-between items-center border-b-0 pb-1 border-[#ECECEC] shadow-sm lg:shadow-none">
 
         <div className="inline lg:hidden">
           <SortRoundedIcon  fontSize="large"  className="text-[#80858e] hover:cursor-pointer"/>
@@ -98,7 +116,7 @@ export default function Home() {
           height={60}
         />
 
-        <div className="border-[2px] hidden lg:flex text-[#133B50] rounded font-[600]  justify-center items-center border-[#ECECEC]  pl-2 pr-3  py-3 ">
+        <div className="border-[2px] hidden lg:flex text-[#133B50] rounded font-[600]  justify-center items-center border-[#ECECEC]  pl-2 pr-3  py-3 ml-5 ">
           <button className="border-r-3 hover:cursor-pointer flex justify-center items-center pr-2 border-[#ECECEC] ">
             &nbsp;&nbsp;All Categories
             <IoIosArrowDown className="ml-0.5" size={16} color="#181818" />
@@ -157,6 +175,161 @@ export default function Home() {
       </div>
 
       {/* Nav Closing */}
+
+      {/* Main Nav Starting */}
+
+              <nav className="px-3 bg-white font-[600] sticky top-0 border-y-[2px] flex justify-between  items-center border-[#ECECEC] py-2">
+
+                <div>
+                    <button className="flex justify-center bg-[#0CB85E] px-2 py-2 rounded shadow text-white items-center">
+                      <CategoryOutlinedIcon/>
+                      Browse All Categories
+                      <KeyboardArrowDownOutlinedIcon/>
+                      </button>
+                </div>
+
+                <ul className="flex justify-between  items-center  gap-3 w-[60%]">
+
+                  <li>
+                    <button className="flex hover:cursor-pointer hover:text-[#0CB85E]  justify-center items-center">
+                      <LocalFireDepartmentOutlinedIcon className="text-[#0CB85E]"/>
+                      Hot Deals
+                    </button>
+                  </li>
+
+                  
+
+                  <li>
+                    <button className="flex hover:cursor-pointer hover:text-[#0CB85E]  justify-center items-center">
+                      New Arrivals
+                    </button>
+                  </li>
+
+                  <li>
+                    <button className="flex hover:cursor-pointer hover:text-[#0CB85E]  justify-center items-center">
+                      Offers / Coupons
+                    </button>
+                  </li>
+
+
+                  <li>
+                    <button className="flex hover:cursor-pointer hover:text-[#0CB85E]  justify-center items-center">
+                      About Us
+                    </button>
+                  </li>
+
+
+                   <li>
+                    <button className="flex hover:cursor-pointer hover:text-[#0CB85E] justify-center items-center">
+                      Contact Us
+                    </button>
+                  </li>
+
+
+                </ul>
+
+                <div className="flex justify-center items-center gap-1">
+                      <HeadsetMicOutlinedIcon fontSize="large" className="text-[#253D4E]"/>
+                      <div className="flex flex-col justify-center items-center">
+                        <div className="text-[#0CB85E] text-[20px]">1800 - 9936</div>
+                        <div className="text-[#6A7282] text-[14px] -mt-1">24/7 Helpdesk</div>
+                      </div>
+                </div>
+
+              </nav>
+
+
+      {/* Main Nav Closing */}
+
+
+              {/* Carousel */}
+
+           
+
+       
+                
+
+
+          
+            
+         
+
+
+              {/* Carousel Closing */}
+
+
+
+              {/* Featured Categories */}
+
+              
+              <div className="px-3 mt-8">
+                <h1 className="text-[#253D4E] text-[28px] font-[700] mb-6 ">Featured Categories</h1>
+
+                <div className="flex items-center gap-4 overflow-x-scroll">
+
+                    
+                    <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+
+                    
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+
+                     <div className="bg-[#fff3ff] hover:cursor-pointer hover:border-[1.5px] border-[#0CB85E] h-[170px] rounded-lg hover:shadow-sm w-[140px]">
+
+                    </div>
+
+                    
+
+                </div>
+
+              </div>
+      
     </>
   );
 }
